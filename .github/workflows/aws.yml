@@ -34,6 +34,7 @@ jobs:
           cd ~/myproject
           git remote -v
           git pull origin main --no-edit  # Change this to your main branch
+          pip install --upgrade pip
           pip install -r requirements.txt
           pkill -f runserver  # Stop the current Django process
           nohup python3 manage.py runserver 0.0.0.0:8000 > server.log 2>&1 &  # Restart in the background
